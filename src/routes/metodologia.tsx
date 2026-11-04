@@ -46,7 +46,7 @@ function Metodologia() {
           {pillars.map((p, i) => (
             <div key={p.title} className="grid items-center gap-8 lg:grid-cols-2 lg:gap-16">
               <Reveal className={`aspect-[16/11] overflow-hidden rounded-lg shadow-card ${i % 2 ? "lg:order-2" : ""}`}>
-                <Photo name={pillarPhotos[i]} className="transition-transform duration-700 hover:scale-105" />
+                <Photo name={pillarPhotos[i] ?? "abraco-equipa"} className="transition-transform duration-700 hover:scale-105" />
               </Reveal>
               <Reveal delay={120}>
                 <div className="flex items-center gap-4">

@@ -67,7 +67,7 @@ export function Gallery({ items }: { items: Item[] }) {
           );
         })}
       </ul>
-      {index !== null && (
+      {index !== null && items[index] && (
         <Lightbox item={items[index]} position={index + 1} total={items.length} onClose={close} onStep={step} />
       )}
     </>
@@ -114,10 +114,11 @@ function Lightbox({
       aria-label="Fotografia ampliada"
       className="fixed inset-0 z-[100] flex flex-col bg-ink/95 backdrop-blur-sm animate-in fade-in duration-200"
       onClick={onClose}
-      onTouchStart={(e) => (touchX.current = e.touches[0].clientX)}
+      onTouchStart={(e) => (touchX.current = e.touches[0]?.clientX ?? null)}
       onTouchEnd={(e) => {
-        if (touchX.current === null) return;
-        const dx = e.changedTouches[0].clientX - touchX.current;
+        const end = e.changedTouches[0]?.clientX;
+        if (touchX.current === null || end === undefined) return;
+        const dx = end - touchX.current;
         if (Math.abs(dx) > 50) onStep(dx < 0 ? 1 : -1);
         touchX.current = null;
       }}
