@@ -73,7 +73,7 @@ function Index() {
           {[
             { k: String(site.founded), v: "Ano de fundação" },
             { k: "2", v: "Professores de Educação Física" },
-            { k: "100%", v: "Inclusivo — todos jogam" },
+            { k: "Todos", v: "Connosco todos jogam" },
             { k: "Futebol", v: "Em todas as suas variantes" },
           ].map((f, i) => (
             <Reveal key={f.v} delay={i * 80} className="px-2 py-8 text-center lg:py-10">

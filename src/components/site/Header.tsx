@@ -94,7 +94,7 @@ export function Header() {
       <div
         id="menu-mobile"
         className={cn(
-          "fixed inset-x-0 bottom-0 top-[60px] bg-ink transition-all duration-300 lg:hidden",
+          "fixed inset-x-0 bottom-0 top-14 bg-ink transition-all duration-300 lg:hidden",
           open ? "visible opacity-100" : "invisible opacity-0",
         )}
       >
