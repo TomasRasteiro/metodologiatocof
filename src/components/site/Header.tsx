@@ -33,7 +33,9 @@ export function Header() {
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         overHero
           ? "bg-transparent py-4"
-          : "bg-ink/95 py-2 shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-ink/85",
+          : open
+            ? "bg-ink py-2"
+            : "bg-ink/95 py-2 shadow-lg backdrop-blur-md supports-[backdrop-filter]:bg-ink/85",
       )}
     >
       <div className="container-site flex items-center justify-between gap-4">
