@@ -1,5 +1,3 @@
-import ficha from "@/assets/ficha-inscricao-tocof.pdf.asset.json";
-
 // Informação verdadeira do clube, retirada do site original. Não alterar sem confirmação.
 export const site = {
   name: "Clube de Futebol Metodologia TOCOF",
@@ -22,7 +20,7 @@ export const site = {
     { label: "Instagram", href: "https://www.instagram.com/metodologiatocof/" },
     { label: "YouTube", href: "https://www.youtube.com/channel/UCNKPn0D2xJ33BsbZDp5anyQ/videos" },
   ],
-  fichaUrl: ficha.url,
+  fichaUrl: "/ficha-inscricao-tocof.pdf",
   fichaFilename: "ficha-inscricao-tocof.pdf",
 } as const;
 
